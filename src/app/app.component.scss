@@ -1,0 +1,44 @@
+.report-container {
+  display: block;
+  width: 98%;
+  margin: 0px auto;
+  padding: 10px;
+  font-family: "Open Sans";
+  border: 1px solid black;
+  max-width: 1280px;
+  .report-title{
+    font-weight: 300;
+    color: lightslategrey;
+  }
+
+  .report-text_bold {
+    font-weight: 500;
+    color: lightslategrey;
+ }
+}
+
+.mat-header-cell, .mat-footer-cell {
+  width: 105px;
+  color: lightgray;
+  font-weight: 100;
+  border: none;
+  font-size: .8em;
+
+}
+th.mat-column-blankColumn, th.mat-column-blankColumn2{ border-left: none;}
+
+.mat-column-blankColumn{ border-left: solid 1px lightgray;}
+
+ .mat-column-blankColumn2 {
+  border-left: solid 1px lightgray;
+}
+td.mat-cell{
+  border-bottom: none;
+  font-size: 0.7em;
+  padding-right: 5px;
+  color: lightgray;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
