@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatTableModule} from '@angular/material/table';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule
 
   ],
   providers: [DataService],

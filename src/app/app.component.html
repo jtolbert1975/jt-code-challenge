@@ -1,6 +1,6 @@
 <div class="report-container">
   <div class="report-title" role="banner">Labour cost report</div>
-  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" (matSortChange)="customSort($event)">
 
     <ng-container matColumnDef="name">
     <th  mat-header-cell *matHeaderCellDef mat-sort-header> Payroll Provider </th>

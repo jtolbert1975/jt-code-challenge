@@ -56,7 +56,7 @@ export class DataService {
      for (let i = 0; i < length; i++){
 
       contractor[i].type = 'directcontractor';
-      console.log('Contracotr: ', contractor);
+
       newContractorItems.push(contractor);
      }
 
@@ -117,7 +117,7 @@ export class DataService {
 
     }
 
-    console.log(providerList[0].providers);
+
     if (providerList){
 
       // tslint:disable-next-line:prefer-for-of

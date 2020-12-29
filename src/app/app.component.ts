@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { DataService } from './services/data.service';
 import { DisplayLaborCostClass } from './models/display-labor-cost-class';
-import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
+
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit,  AfterViewInit {
   dataSource: any;
   sortedData: DisplayLaborCostClass[] = [];
 
-  @ViewChild(MatSort) sort: MatSort | undefined;
+  @ViewChild(MatSort) sort?: MatSort;
 
  // tslint:disable-next-line:typedef
   ngOnInit() {
@@ -80,9 +81,13 @@ export class AppComponent implements OnInit,  AfterViewInit {
 
        newProviderList.push(item);
      }
-     console.log(newProviderList);
+
      return newProviderList;
 
+   }
+
+   customSort(event: any): any {
+     //console.log('Ypu wat to sort');
    }
 
 }
