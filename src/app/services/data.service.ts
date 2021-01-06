@@ -20,27 +20,18 @@ export class DataService {
     return this.httpClient.get(this.apiServer);
    }
 
+
  public setDisplayList(costs: any): any {
 
   const directContractors: any = costs[0].directContractors;
   const providers: any = costs[0].providers;
   const totals: any = costs[0].total;
-
-
-
-
   // tslint:disable-next-line:no-unused-expression
   (directContractors) ? this.addDirectContractorType(directContractors) : [];
   // tslint:disable-next-line:no-unused-expression
   (providers) ? this.addProviderType(providers) : [];
 
-
-
-
-
   this.displayLaborCost = this.createDisplayList(directContractors, providers, totals);
-
-
 
   return  this.displayLaborCost;
 
@@ -78,20 +69,17 @@ export class DataService {
       newProviderItems.push(providers);
     }
 
-
     return newProviderItems;
   }
 
   private createDisplayList(directContractors: any, providers: any, totals: any): any{
     const providerList: any = [];
 
-
     if (directContractors.length > 0){
       const testList: any = [];
       for (const item of directContractors){
         testList.push(item);
       }
-
       providerList[0] = {providers: testList} ;
     }
 
@@ -100,9 +88,6 @@ export class DataService {
       for (const item of providers){
         providerList[0].providers.push(item);
       }
-
-
-
     }
 
 
@@ -112,14 +97,11 @@ export class DataService {
         testList.push(item);
         // console.log('ProviderLIst1: ', testList);
       }
-
       providerList[1] = {totals: testList} ;
-
     }
 
 
     if (providerList){
-
       // tslint:disable-next-line:prefer-for-of
        for (let i = 0; i < providerList[0].providers.length; i++){
          if (providerList[0].providers[i].complianceStats === null){
@@ -128,15 +110,12 @@ export class DataService {
          }
       }
 
-
-      }
+    }
 
     this.setWorkerPercentage(providerList);
     this.setTotalWorkersPercentage(providerList);
 
-
     return providerList;
-
 
   }
 
@@ -151,12 +130,8 @@ export class DataService {
 
        item.workerPercentage = workerPercentage;
 
-
        newProviderList.push(item);
      }
-
-
-
   }
 
   setTotalWorkersPercentage(providerList: any): any {
@@ -169,6 +144,4 @@ export class DataService {
     }
 
   }
-
-
 }

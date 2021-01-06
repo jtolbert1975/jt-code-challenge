@@ -45,7 +45,7 @@ export class AppComponent implements OnInit,  AfterViewInit {
   }
 
   ngAfterViewInit(): any {
-    console.log('Sort: ', this.sort);
+    // console.log('Sort: ', this.sort);
     this.dataSource.sort = this.sort;
 
   }
@@ -69,8 +69,8 @@ export class AppComponent implements OnInit,  AfterViewInit {
    }
 
    setWorkForce(providerList: any, workerTotal: any): any {
-     console.log('providerList: ', providerList);
-     console.log('workerTotal: ', workerTotal[0].workerCount);
+    //  console.log('providerList: ', providerList);
+    //  console.log('workerTotal: ', workerTotal[0].workerCount);
      const totalWorkers = workerTotal[0].workerCount;
      const newProviderList: any = [];
      for (const item of providerList){
